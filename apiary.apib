@@ -3,6 +3,85 @@ HOST: http://www.google.com
 
 # lifechart
 Notes API is a *short texts saving* service similar to its physical paper presence on your table.
+
+#Checklist Notes
+## checklists Collection [/checklists]
+### List all checklists [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "Weight Loss", "freq": "daily"
+        }, {
+          "id": 2, "title": "PSY 200", "freq": "weekly"
+        }]
+
+### Create a checklist [POST]
++ Request (application/json)
+
+        { "title": "Half Marathon Preparation" }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+
+
+#User Notes
+
+Only those users with admin privs can access these
+
+## user Collection [/checklists]
+### List all users [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "title": "John Smith", "organization": "Mercy Hospital"
+        }, {
+          "id": 2, "title": "PSY 200", "freq": "weekly"
+        }]
+
+### Create a User [POST]
++ Request (application/json)
+
+        { "title": "陳明泰" }
+
++ Response 201 (application/json)
+
+        { "id": 3, "title": "陳明泰" }
+
+        
+#organization Notes
+## organization Collection [/checklists]
+### List all organization [GET]
+
+List all organization to which the user is a member
+
++ Response 200 (application/json)
+
+        [{
+          "id": 1,
+          "object_id": "KMD834NMF84NFOIRN8",
+          "title": "Mercy Hospital",
+          "city": "Chicago,
+          "state": "IL",
+          "country": "US"
+        }, {
+          "id": 2,
+          "object_id": "KMD834NMF84NFOIRN8",
+          "title": "Adventist Hospital",
+          "city": "Chicago,
+          "state": "IL",
+          "country": "US"
+        }]
+
+### Create a organization [POST]
++ Request (application/json)
+
+        { "title": "Mercy Hospital" }
+
++ Response 201 (application/json)
+
+        { "id": 3, "object_id": "KMD834NMF84NFOIRN8" }
+        
 #Templates Notes
 ## Templates Collection [/Templates]
 ### List all Templates [GET]

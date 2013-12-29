@@ -9,7 +9,7 @@
 - add document to session collection
 
 {
- "_id"
+ "_id" 
  "user_id"
  "last_activity"
  "last_ip"
