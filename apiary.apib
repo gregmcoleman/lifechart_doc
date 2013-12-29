@@ -25,11 +25,10 @@ Notes API is a *short texts saving* service similar to its physical paper presen
         { "id": 3, "title": "Buy cheese and bread for breakfast." }
 
 
-#User Notes
 
-Only those users with admin privs can access these
-
+# Group Users
 ## user Collection [/checklists]
+Only those users with admin privs can access these
 ### List all users [GET]
 + Response 200 (application/json)
 
@@ -48,9 +47,10 @@ Only those users with admin privs can access these
 
         { "id": 3, "title": "陳明泰" }
 
-        
-#organization Notes
-## organization Collection [/checklists]
+# Group Organization
+Things
+
+##organization Collection [/checklists]
 ### List all organization [GET]
 
 List all organization to which the user is a member
@@ -82,7 +82,7 @@ List all organization to which the user is a member
 
         { "id": 3, "object_id": "KMD834NMF84NFOIRN8" }
         
-#Templates Notes
+# Group Templates
 ## Templates Collection [/Templates]
 ### List all Templates [GET]
 + Response 200 (application/json)
@@ -143,3 +143,4 @@ A single Note object with all its details
 
 ### Remove a Note [DELETE]
 + Response 204
+
